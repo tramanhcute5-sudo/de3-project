@@ -20,7 +20,6 @@ while True:
     print(f"Mon hoc: {mon_hoc}")
     input("Nhan Enter de bat dau...")
 
-    # Dem nguoc thoi gian hoc
     tong_giay = thoi_gian_hoc * 60
 
     for i in range(tong_giay, 0, -1):
@@ -39,14 +38,12 @@ while True:
 
         time.sleep(1)
 
-    # Ket thuc 1 lan hoc
     so_lan += 1
 
     print("\n\nHET GIO HOC!")
     print(f"Ban da hoan thanh {so_lan} lan Pomodoro!")
     print("Rat tot! Hay tiep tuc phat huy!")
 
-    # Dem nguoc thoi gian nghi
     print(f"\nBat dau nghi ngoi {thoi_gian_nghi} phut...")
 
     tong_giay = thoi_gian_nghi * 60
@@ -60,7 +57,6 @@ while True:
 
     print("\nDa het thoi gian nghi!")
 
-    # Hoi tiep tuc
     tiep_tuc = input("\nBan co muon hoc tiep khong (c/k)? ")
 
     if tiep_tuc.lower() != "c":
