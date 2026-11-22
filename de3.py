@@ -5,48 +5,53 @@ print("=" * 55)
 print("             DONG HO HOC TAP POMODORO")
 print("=" * 55)
 
-mon_hoc = input("Hom nay ban muon hoc gi? ")
+#nhapmonhoc
+monhoc = input("Hom nay ban muon hoc gi? ")
 
-thoi_gian_hoc = int(input("Thoi gian hoc (phut): "))
-thoi_gian_nghi = int(input("Thoi gian nghi (phut): "))
+thoigianhoc = int(input("Thoi gian hoc (phut): "))
+thoigiannghi = int(input("Thoi gian nghi (phut): "))
 
-so_lan = 0
+solan = 0
 
+#batdauchay
 while True:
     print("\n" + "=" * 55)
-    print(f"BAT DAU PHIEN HOC SO {so_lan + 1}")
-    print(f"Mon hoc: {mon_hoc}")
+    print(f"BAT DAU PHIEN HOC SO {solan + 1}")
+    print(f"Mon hoc: {monhoc}")
     input("Nhan Enter de bat dau...")
 
-    tong_giay = thoi_gian_hoc * 60
+    #demtg
+    tonggiay = thoigianhoc * 60
 
-    for i in range(tong_giay, 0, -1):
+    for i in range(tonggiay, 0, -1):
         phut = i // 60
         giay = i % 60
 
-        tien_do = int((tong_giay - i) / tong_giay * 20)
-        thanh = "#" * tien_do + "-" * (20 - tien_do)
-        phan_tram = int((tong_giay - i) / tong_giay * 100)
+        tiendo = int((tonggiay - i) / tonggiay * 20)
+        thanh = "#" * tiendo + "-" * (20 - tiendo)
+        phantram = int((tonggiay - i) / tonggiay * 100)
 
         print(
             f"\rHoc: {phut:02d}:{giay:02d} "
-            f"[{thanh}] {phan_tram}%",
+            f"[{thanh}] {phantram}%",
             end=""
         )
 
         time.sleep(1)
 
-    so_lan += 1
+    #xog1lanhoc
+    solan += 1
 
     print("\n\nHET GIO HOC!")
-    print(f"Ban da hoan thanh {so_lan} lan Pomodoro!")
+    print(f"Ban da hoan thanh {solan} lan Pomodoro!")
     print("Rat tot! Hay tiep tuc phat huy!")
 
-    print(f"\nBat dau nghi ngoi {thoi_gian_nghi} phut...")
+    # Dem nguoc thoi gian nghi
+    print(f"\nBat dau nghi ngoi {thoigiannghi} phut...")
 
-    tong_giay = thoi_gian_nghi * 60
+    tonggiay = thoigiannghi * 60
 
-    for i in range(tong_giay, 0, -1):
+    for i in range(tonggiay, 0, -1):
         phut = i // 60
         giay = i % 60
 
@@ -55,12 +60,13 @@ while True:
 
     print("\nDa het thoi gian nghi!")
 
-    tiep_tuc = input("\nBan co muon hoc tiep khong (c/k)? ")
+    #hoingdung
+    tieptuc = input("\nBan co muon hoc tiep khong (c/k)? ")
 
-    if tiep_tuc.lower() != "c":
+    if tieptuc.lower() != "c":
         break
 
 print("\n" + "=" * 55)
-print("TONG SO PHIEN POMODORO:", so_lan)
+print("TONG SO PHIEN POMODORO:", solan)
 print("CHUC BAN HOC TAP THAT HIEU QUA!")
 print("=" * 55)
