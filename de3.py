@@ -5,7 +5,6 @@ print("=" * 55)
 print("             DONG HO HOC TAP POMODORO")
 print("=" * 55)
 
-# Nhap thong tin
 mon_hoc = input("Hom nay ban muon hoc gi? ")
 
 thoi_gian_hoc = int(input("Thoi gian hoc (phut): "))
@@ -13,7 +12,6 @@ thoi_gian_nghi = int(input("Thoi gian nghi (phut): "))
 
 so_lan = 0
 
-# Bat dau chuong trinh
 while True:
     print("\n" + "=" * 55)
     print(f"BAT DAU PHIEN HOC SO {so_lan + 1}")
